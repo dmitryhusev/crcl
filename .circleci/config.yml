@@ -1,4 +1,4 @@
-version: 3
+version: 2.1
 jobs:
   build:
     docker:
@@ -35,15 +35,8 @@ jobs:
       - store_artifacts:
           path: allure-report
       - run:
-          name: Store pytest results
-          command: |
-            echo 'export PTST=$(python3 ./pytest_result.py)' >> ~/.bashrc
-            source ~/.bashrc
-          when: always
-      - run:
-          name: Test PTST
+          name: Test Result
           command: |
             echo =====
-            echo $PTST
+            cat res.txt
             echo =====
-            cat ~/.bashrc
