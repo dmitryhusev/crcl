@@ -14,10 +14,10 @@ jobs:
             wget http://archive.ubuntu.com/ubuntu/pool/universe/c/chromium-browser/chromium-codecs-ffmpeg_108.0.5359.71-0ubuntu0.18.04.5_amd64.deb
             wget http://archive.ubuntu.com/ubuntu/pool/universe/c/chromium-browser/chromium-chromedriver_108.0.5359.71-0ubuntu0.18.04.5_amd64.deb
             wget http://archive.ubuntu.com/ubuntu/pool/universe/c/chromium-browser/chromium-codecs-ffmpeg-extra_108.0.5359.71-0ubuntu0.18.04.5_amd64.deb
-            sudo dpkg -i chromium-chromedriver_108.0.5359.71-0ubuntu0.18.04.5_amd64.deb
             sudo dpkg -i chromium-codecs-ffmpeg_108.0.5359.71-0ubuntu0.18.04.5_amd64.deb
             sudo dpkg -i chromium-codecs-ffmpeg-extra_108.0.5359.71-0ubuntu0.18.04.5_amd64.deb
             sudo dpkg -i chromium-browser_108.0.5359.71-0ubuntu0.18.04.5_amd64.deb
+            sudo dpkg -i chromium-chromedriver_108.0.5359.71-0ubuntu0.18.04.5_amd64.deb
 
       - run:
           name: Check chrome and driver ver.
