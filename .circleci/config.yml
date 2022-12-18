@@ -22,7 +22,7 @@ jobs:
             source .env/bin/activate
             mkdir junit_result
             mkdir allure_result
-            python3 -m pytest -n2 --junitxml=junit_result/junit.xml --alluredir=alure_result ./tests
+            python3 -m pytest -n2 --junitxml=junit_result/junit.xml --alluredir=alure_result ./tests | tee res.txt
       - run:
           name: Generate allure report
           command: allure generate -c alure_result -o allure-report
@@ -31,3 +31,15 @@ jobs:
           path: junit_result
       - store_artifacts:
           path: allure-report
+      - run:
+          name: Store pytest results
+          command: |
+            echo 'export PTST=$(python3 ./pytest_result.py)' >> $BASH_ENV
+            source $BASH_ENV
+          when: always
+      - run:
+          name: Test PTST
+          command: |
+            echo =====
+            echo $PTST
+            echo =====
