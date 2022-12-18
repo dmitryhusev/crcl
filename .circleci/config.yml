@@ -7,8 +7,8 @@ jobs:
       - image: cimg/python:3.10-browsers
     steps:
       - checkout
-      - browser-tools/install-chrome
-      - browser-tools/install-chromedriver
+      - browser-tools/install-browser-tools:
+          chrome-version: 106
       - run:
           name: Check chrome and driver ver.
           command: |
