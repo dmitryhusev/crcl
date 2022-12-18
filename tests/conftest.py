@@ -8,12 +8,13 @@ import pytest
 
 @pytest.fixture
 def browser():
-    url = 'http://34.67.99.81:4444/wd/hub'
-    capabilities = {
-        'browserName': 'chrome',
-        'enableVNC': True
-    }
-    driver = webdriver.Remote(url, capabilities)
+    # url = 'http://34.67.99.81:4444/wd/hub'
+    # capabilities = {
+    #     'browserName': 'chrome',
+    #     'enableVNC': True
+    # }
+    # driver = webdriver.Remote(url, capabilities)
+    driver = webdriver.Chrome()
     driver.set_window_size(1920, 1080)
     yield driver
     driver.quit()

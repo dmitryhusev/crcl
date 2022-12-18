@@ -2,12 +2,12 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: cimg/python:3.10-node
+      - image: cimg/python:3.10-browsers
     steps:
       - checkout
       - run:
-          name: Install Java
-          command: sudo apt-get update && sudo apt install -y default-jre
+          name: Check chromedriver version
+          command: chromedriver --version
       - run:
           name: Install dependencies
           command: |
