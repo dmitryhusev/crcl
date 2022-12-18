@@ -6,6 +6,9 @@ jobs:
     steps:
       - checkout
       - run:
+          name: Install Java
+          command: sudo apt install openjdk-11-jdk
+      - run:
           name: Install dependencies
           command: |
             python3 -m virtualenv .env
