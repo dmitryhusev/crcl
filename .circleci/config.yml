@@ -8,7 +8,7 @@ jobs:
       - checkout
       - run:
           name: Install Java
-          command: sudo apt install -y default-jre
+          command: sudo apt install -y openjdk-11-jre-headless
       - run:
           name: Install chromium and driver
           command: |
