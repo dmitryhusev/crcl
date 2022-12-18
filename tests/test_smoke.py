@@ -1,5 +1,6 @@
 
 
+
 def test_smoke_1(browser):
     browser.get('https://pytest-html.readthedocs.io/en/latest/user_guide.html')
     assert 1
