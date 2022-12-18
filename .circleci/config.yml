@@ -7,7 +7,7 @@ jobs:
       - checkout
       - run:
           name: Install Java
-          command: sudo apt install openjdk-11-jre-headless
+          command: sudo apt-get update && sudo apt install -y default-jre
       - run:
           name: Install dependencies
           command: |
