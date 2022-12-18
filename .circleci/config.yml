@@ -8,7 +8,7 @@ jobs:
       - checkout
       - run:
           name: Install Java
-          command: sudo apt install default-jre
+          command: sudo apt install -y default-jre
       - run:
           name: Install chromium and driver
           command: |
