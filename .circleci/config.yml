@@ -37,6 +37,7 @@ jobs:
       - run:
           name: Test Result
           command: |
+            export PTST=$(python3 pytest_result.py)
             echo =====
-            cat res.txt
+            echo $PTST
             echo =====
