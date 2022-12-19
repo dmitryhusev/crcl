@@ -10,6 +10,8 @@ jobs:
           name: Install chromium and driver
           command: |
             sudo apt install firefox 
+            sudo apt-get install firefox-geckodriver
+
             firefox --version
             geckodriver --version
 
