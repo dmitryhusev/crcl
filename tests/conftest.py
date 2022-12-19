@@ -14,7 +14,7 @@ def browser():
     #     'enableVNC': True
     # }
     # driver = webdriver.Remote(url, capabilities)
-    driver = webdriver.Chrome()
+    driver = webdriver.Firefox()
     driver.set_window_size(1920, 1080)
     yield driver
     driver.quit()
