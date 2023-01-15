@@ -10,7 +10,7 @@ opts.add_argument("--headless")
 
 @pytest.fixture
 def browser():
-    driver = webdriver.Firefox(options=opt)
+    driver = webdriver.Firefox(options=opts)
     driver.set_window_size(1920, 1080)
     yield driver
     driver.quit()
