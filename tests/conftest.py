@@ -5,6 +5,8 @@ from selenium.common.exceptions import WebDriverException
 from selenium import webdriver
 import pytest
 
+opts = FirefoxOptions()
+opts.add_argument("--headless")
 
 @pytest.fixture
 def browser():
@@ -14,7 +16,7 @@ def browser():
     #     'enableVNC': True
     # }
     # driver = webdriver.Remote(url, capabilities)
-    driver = webdriver.Firefox()
+    driver = webdriver.Firefox(options=opt)
     driver.set_window_size(1920, 1080)
     yield driver
     driver.quit()
